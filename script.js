@@ -6,15 +6,15 @@ const tracks = [
         artist: "Природа и звуки",
         src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
         duration: "3:42",
-        cover: 
+        cover: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
     },
     {
         id: 2,
-        title: "Минусовка "Бумажный змей" Голос 3. Мариам Мерабова, Виктория Черенцова, Ксения Бузина.",
-        artist: "голос",
+        title: "Энергичный бит",
+        artist: "Электронная музыка",
         src: "https://drive.google.com/file/d/1ch1Cz_LXDARGqxhr2hiuHKEgHyrYSUX9/view?usp=drive_link",
         duration: "4:15",
-        cover: 
+        cover: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
     },
     {
         id: 3,
