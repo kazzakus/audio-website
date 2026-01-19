@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Минусовки и аранжировки | Профессиональные фонограммы</title>
+    
+    <!-- Подключение иконок FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ШАПКА САЙТА -->
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-sliders-h"></i> МИНУСОВКИ И АРАНЖИРОВКИ</h1>
+                <p class="subtitle">Профессиональные фонограммы для вокалистов и музыкантов</p>
+                
+                <!-- Блок заказа -->
+                <div class="order-section">
+                    <h3><i class="fas fa-shopping-cart"></i> Заказать аранжировку</h3>
+                    <p>Хотите собственную минусовку или аранжировку? Свяжитесь с нами</p>
+                    
+                    <div class="order-actions">
+                        <button class="order-btn" id="orderBtn">
+                            <i class="fas fa-credit-card"></i> Заказать аранжировку
+                        </button>
+                        
+                        <div class="price-options">
+                            <button class="price-btn" data-price="1500">Базовая 1500 ₽</button>
+                            <button class="price-btn" data-price="3000">Стандарт 3000 ₽</button>
+                            <button class="price-btn" data-price="5000">Про 5000 ₽</button>
+                            <input type="number" class="custom-price" placeholder="Другая сумма" min="1000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- КАТАЛОГ МИНУСОВОК -->
+        <main>
+            <div class="catalog-header">
+                <h2><i class="fas fa-headphones"></i> Каталог минусовок</h2>
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="trackSearch" placeholder="Поиск по жанру, тональности...">
+                </div>
+            </div>
+            
+            <!-- СЕТКА С ТРЕКАМИ -->
+            <div class="tracks-container" id="tracksContainer">
+                <!-- Треки будут вставлены сюда через JavaScript -->
+            </div>
+        </main>
+
+        <!-- ПЛЕЕР (ВНИЗУ) -->
+        <div class="player-wrapper">
+            <div class="player-header">
+                <h3><i class="fas fa-play-circle"></i> Сейчас прослушивается</h3>
+                <div class="track-info">
+                    <span id="nowPlayingTitle">Минусовка не выбрана</span>
+                    <span id="nowPlayingArtist"></span>
+                </div>
+            </div>
+            
+            <div class="player-controls">
+                <!-- Обложка трека -->
+                <div class="album-art">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                         alt="Обложка" id="albumCover">
+                </div>
+                
+                <!-- Основные элементы управления -->
+                <div class="controls">
+                    <!-- Прогресс-бар -->
+                    <div class="progress-wrapper">
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span>
+                            <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Кнопки управления -->
+                    <div class="control-buttons">
+                        <button class="ctrl-btn" id="prevBtn" title="Предыдущий">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button class="play-btn" id="playPauseBtn" title="Воспроизвести">
+                            <i class="fas fa-play" id="playIcon"></i>
+                        </button>
+                        <button class="ctrl-btn" id="nextBtn" title="Следующий">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button class="ctrl-btn" id="stopBtn" title="Стоп">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                        
+                        <!-- Громкость -->
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up"></i>
+                            <input type="range" id="volumeControl" min="0" max="100" value="70">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПОДВАЛ -->
+        <footer>
+            <p>Сайт создан на GitHub Pages | Профессиональные аранжировки под заказ</p>
+            <p class="contact-info">
+                <i class="fas fa-envelope"></i> Для заказа: arrangements@example.com
+            </p>
+        </footer>
+    </div>
+
+    <!-- АУДИО ЭЛЕМЕНТ (скрытый) -->
+    <audio id="audioPlayer" preload="metadata"></audio>
+
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ -->
+    <script src="script.js"></script>
+</body>
+</html>
